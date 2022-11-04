@@ -2,7 +2,7 @@ Q ?= @
 CC = arm-none-eabi-gcc
 AR = arm-none-eabi-ar
 RANLIB = arm-none-eabi-ranlib
-NWLINK = nwlink
+NWLINK = npx --yes -- nwlink@0.0.15
 LINK_GC = 1
 LTO = 1
 

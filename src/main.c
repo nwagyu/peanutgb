@@ -36,7 +36,7 @@ static void lcd_draw_line_centered(struct gb_s * gb, const uint8_t * input_pixel
   for (int i=0; i<LCD_WIDTH; i++) {
     output_pixels[i] = eadk_color_from_gb_pixel(input_pixels[i]);
   }
-  eadk_display_push_rect((eadk_rect_t){(EADK_SCREEN_WIDTH-LCD_WIDTH)/2, (EADK_SCREEN_HEIGTH-LCD_HEIGHT)/2+line, LCD_WIDTH, 1}, output_pixels);
+  eadk_display_push_rect((eadk_rect_t){(EADK_SCREEN_WIDTH-LCD_WIDTH)/2, (EADK_SCREEN_HEIGHT-LCD_HEIGHT)/2+line, LCD_WIDTH, 1}, output_pixels);
 }
 
 static void lcd_draw_line_maximized(struct gb_s * gb, const uint8_t * input_pixels, const uint_fast8_t line) {
